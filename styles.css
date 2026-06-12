@@ -164,16 +164,7 @@ p  { color: var(--ink-soft); max-width: 38em; }
   font-weight: 500;
   white-space: nowrap;
 }
-.nav-logo .dim { color: var(--ink-soft); }
 .nav-logo .accent { color: var(--accent); }
-.nav-logo .cursor {
-  display: inline-block;
-  width: 0.5em;
-  margin-left: 0.05em;
-  background: var(--accent);
-  animation: blink 1.1s steps(1) infinite;
-}
-@keyframes blink { 50% { opacity: 0; } }
 
 .nav-links {
   display: flex;
@@ -363,7 +354,7 @@ p  { color: var(--ink-soft); max-width: 38em; }
   overflow: hidden;
 }
 .footer::before {
-  content: "GrindhaugDigital()";
+  content: "GrindhaugDigital";
   position: absolute;
   right: -1%;
   bottom: -0.55em;
