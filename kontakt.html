@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — Grindhaug Digital</title>
+  <meta name="description" content="Ta kontakt med Grindhaug Digital for en uforpliktende samtale om nettsiden din." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .field { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.6rem; }
+    .field label {
+      font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft);
+    }
+    .field input, .field textarea {
+      font-family: var(--body); font-size: 1rem; color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      resize: vertical;
+    }
+    .field input:focus, .field textarea:focus {
+      border-color: var(--accent);
+    }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a href="index.html" class="nav-logo">Grindhaug<span class="accent">Digital</span><span class="dim">()</span><span class="cursor">_</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="portefolje.html">Portefølje</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      </ul>
+      <a href="kontakt.html" class="nav-cta">Ta kontakt →</a>
+      <button class="nav-toggle" aria-label="Åpne meny" aria-expanded="false">☰</button>
+    </div>
+  </nav>
+
+  <header class="page-head hero">
+    <span class="hero-glyph" aria-hidden="true">@</span>
+    <div class="wrap reveal">
+      <p class="eyebrow">kontakt</p>
+      <h1 class="text-balance" style="max-width: 18em;">Send meg en melding, og la oss snakke om nettsiden din.</h1>
+      <p class="lede" style="margin-top: 1.4rem;">
+        Beskriv kort hva du har behov for — jeg svarer vanligvis innen en
+        til to virkedager.
+      </p>
+    </div>
+  </header>
+
+  <section class="hairline">
+    <div class="wrap grid-2" style="gap: 4rem;">
+
+      <!-- Kontaktform (via Formspree — fungerer på GitHub Pages) -->
+      <div class="reveal">
+        <form action="https://formspree.io/f/DITT-FORM-ID" method="POST">
+          <p class="visually-hidden">
+            <label>Ikke fyll ut dette: <input name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+          </p>
+
+          <div class="field">
+            <label for="navn">Navn</label>
+            <input type="text" id="navn" name="navn" required />
+          </div>
+
+          <div class="field">
+            <label for="epost">E-post</label>
+            <input type="email" id="epost" name="epost" required />
+          </div>
+
+          <div class="field">
+            <label for="melding">Melding</label>
+            <textarea id="melding" name="melding" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send melding <span class="btn-arrow">→</span></button>
+        </form>
+      </div>
+
+      <!-- Direkte kontaktinfo -->
+      <div class="reveal" style="transition-delay: 0.1s;">
+        <p class="eyebrow">direkte</p>
+        <h3 style="margin-bottom: 1.6rem;">Foretrekker du e-post eller telefon?</h3>
+
+        <div class="divider-list" style="margin-bottom: 2.5rem;">
+          <div style="padding-top: 0;">
+            <p style="font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.4rem;">e-post</p>
+            <a href="mailto:erik@grindhaugdigital.no" style="font-size: 1.1rem; color: var(--ink);">erik@grindhaugdigital.no</a>
+          </div>
+          <div>
+            <p style="font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.4rem;">telefon</p>
+            <a href="tel:+4700000000" style="font-size: 1.1rem; color: var(--ink);">+47 000 00 000</a>
+          </div>
+          <div>
+            <p style="font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.4rem;">sted</p>
+            <p style="color: var(--ink); margin: 0;">Bergen, Norge</p>
+          </div>
+        </div>
+
+        <div class="hairline" style="padding-top: 1.8rem;">
+          <p style="font-family: var(--mono); font-size: 0.8rem; color: var(--ink-soft); margin-bottom: 0.4rem;">foretak</p>
+          <p style="color: var(--ink); margin: 0;">
+            Grindhaug Digital — enkeltpersonforetak<br>
+            Org.nr: 000 000 000
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer hairline">
+    <div class="wrap">
+      <div class="footer-brand">Grindhaug<span style="color: var(--accent);">Digital</span></div>
+      <div class="footer-meta">
+        <span>Grindhaug Digital · Enkeltpersonforetak</span>
+        <span>Bergen, Norge</span>
+        <a href="mailto:erik@grindhaugdigital.no">erik@grindhaugdigital.no</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
